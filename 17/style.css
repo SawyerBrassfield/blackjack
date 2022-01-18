@@ -1,0 +1,75 @@
+body {
+    background-image: url("table.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+#combar {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+#cc2, #cc3, #cc4, #cc5, #cc6, #cc7, #cc8, #cc9, #cc10, #hc2, #hc3, #hc4, #hc5, #hc6, #hc7, #hc8, #hc9, #hc10 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+    height: 20vh;
+    width: 8%;
+    display: none;
+}
+#cc1, #hc1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    width: 8%;
+    display: none;
+}
+#bigcard {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#choices {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+#hit {
+    background-color: rgba(50, 205, 50, 0.4);
+    height: 13vh;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 1vh;
+}
+#stand {
+    background-color: rgba(255, 0, 60, 0.4);
+    height: 13vh;
+    width: 10%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 1vh;
+}
+#humbar {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+#bigimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vh;
+    width: 17%;
+    display: none;
+}
