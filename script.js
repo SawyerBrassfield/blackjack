@@ -1,11 +1,18 @@
-var cardTotal
-var cardNum = Math.floor(Math.random() * 13) + 1
-var cardSuit = Math.floor(Math.random() * 4) + 1
+var cardTotal = 0
+var cardNum = 0
+var cardSuit = 0
 var cardValue
 var cardSuited
 var cardNumber
 var cardFinal
+var aceAmount = 0
+var bigImg = document.getElementById("bigimg")
+var hits = 0
+var cardStorage = []
+var barCard
 function suitPick() {
+    cardNum = Math.floor(Math.random() * 13) + 1
+    cardSuit = Math.floor(Math.random() * 4) + 1
     if(cardSuit == 1) {
         cardSuited = "S"
     }
@@ -42,12 +49,30 @@ function valuePick() {
     else if(cardNum == 1) {
         cardNumber = "A"
         cardValue = 11
+        aceAmount += 1
     }
+    console.log(`you have drawn ${aceAmount} aces`)
 }
 function cardPick() {
     suitPick()
     valuePick()
+    cardTotal += cardValue
     cardFinal = `${cardNumber}${cardSuited}`
-    console.log(`the card is ${cardFinal} with a value of ${cardValue}`)
+    console.log(`the card is ${cardFinal} with a value of ${cardValue}. Your score is ${cardTotal}`)
 }
-cardPick()
+function dispCard() {
+    bigImg.style.backgroundImage = `url(cards/${cardFinal}.jpg)`
+    bigImg.style.display = "flex"
+    setTimeout(function(){bigImg.style.display = "none"}, 1500)
+    cardStorage[hits - 1] = cardFinal
+    console.log(`hits: ${hits}`)
+    console.log(cardStorage)
+    barCard = document.getElementById(`hc${hits}`)
+    barCard.style.backgroundImage = `url(cards/${cardFinal}.jpg)`
+    barCard.style.display = "flex"
+}
+function hit() {
+    hits += 1
+    cardPick()
+    dispCard()
+}
